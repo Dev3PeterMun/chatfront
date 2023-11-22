@@ -55,6 +55,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "move-safe:build",
+            "proxyConfig": "proxy.conf.json"
+              },
           "configurations": {
             "production": {
               "buildTarget": "chat360front:build:production"
@@ -91,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
